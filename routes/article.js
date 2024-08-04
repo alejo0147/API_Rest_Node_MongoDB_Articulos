@@ -36,11 +36,6 @@ const subidas = multer({
     fileFilter: fileFilter
 }).single('file0');
 
-
-//  RUTAS DE PRUBAS
-router.get("/ruta-de-prueba", findArticleController.prueba);
-router.get("/curso", findArticleController.curso);
-
 //  RUTA ÚTIL
 router.post("/crear", findArticleController.save);
 router.get("/articulos", findArticleController.listar);

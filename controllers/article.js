@@ -3,27 +3,6 @@ const validator = require("validator");
 const Article = require("../models/Article");
 const path = require('path');
 
-const prueba = (req, res) => {
-    return res.status(200).json({
-        mensaje: "Soy una acción de prueba en mi controlador de artículos"
-    });
-}
-
-const curso = (req, res) => {
-    console.log("Se ha ejecutado el endpoint probando");
-
-    return res.status(200).json([{
-            curso: "Node",
-            anio: 2024
-        },
-        {
-            curso: "Java",
-            anio: 2023
-        }
-    ]);
-};
-
-
 const save = async (req, res) => {
     //  RECOGER PARÁMETROS POR POST A GUARDAR
     let parametros = req.body;
@@ -367,8 +346,6 @@ const buscar = async (req, res) => {
 
 
 module.exports = {
-    prueba,
-    curso,
     save,
     listar,
     findId,
